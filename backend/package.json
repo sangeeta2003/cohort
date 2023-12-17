@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "pre-commit": "npm run format"
-
   },
   "keywords": [],
   "author": "",
