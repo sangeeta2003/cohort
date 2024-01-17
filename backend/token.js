@@ -4,6 +4,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const jwtPassword = "12345";
 const app = express()
+
 app.use(express.json());
 const ALL_VALUES = [
     {
