@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript addevent listener</h1>
+    <p>
+        this example use the window event in the laptop
+    </p>
+    <p>try this event to resize the window </p>
+
+    <p id="demo"></p>
+    <script>
+        window.addEventListener("resize",function(){
+            document.getElementById("demo").innerHTML = Math.random();
+        })
+    </script>
+</body>
+</html>
