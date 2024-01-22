@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascrpt addEventListener</h2>
+    <div id="myDiv1">
+<h2>Capturing :</h2>
+<p id="myp1">Click me</p>
+    </div>
+    <div id="myDiv2">
+        <h2>Capturing :</h2>
+        <p id="myp2">Click me</p>
+            </div>
+
+    <script>
+        document.getElementById("myp1").addEventListener("click",function(){
+            alert("you clicked white part");
+        },false)
+        document.getElementById("myDiv1").addEventListener("click",function(){
+            alert("you clicked orange part");
+        },false)
+        document.getElementById("myp2").addEventListener("click",function(){
+            alert("you clicked orange part");
+        },false)
+        document.getElementById("myDiv2").addEventListener("click",function(){
+            alert("you clicked orange part");
+        },true)
+    </script>
+</body>
+</html>
