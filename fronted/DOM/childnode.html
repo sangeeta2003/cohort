@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this is a comment node -->
+    <h1>the element onject</h1>
+    <h2>the childnode property</h2>
+    <p>whitespace between elements are text nodes, comments are also nodes</p>
+
+    <p>the body element's child nodes are:</p>
+    <p id="demo"></p>
+    <script>
+        const nodeList = document.body.childNodes;
+        let text = "";
+
+        for(let i = 0; i < nodeList.length; i++){
+            text += nodeList[i].nodeName + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
