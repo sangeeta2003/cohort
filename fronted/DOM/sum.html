@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" placeholder="eneter the number" id="num1"/><br>
+    <input oninput="popularDiv()" type="number" placeholder="eneter the number" id="num1"/><br>
     <input type="number" placeholder="eneter the number " id="num2"/><br>
 
     <button id="sum" onclick="populateDiv()">Calculate the sum </button><br>
-<p id="finalsum"></p>
+<!-- <p id="finalsum"></p> -->
     <script>
 //         let num1Input = document.getElementById('num1')
 // let num2Input = document.getElementById('num2')
@@ -28,6 +28,17 @@
 //     result.textContent = "the sum is" + sum;
 // })
 
+// debouncing
+
+function debouncingPopulateDiv(){
+    // how to cancel the clock 
+    // cleartimeout
+    let timeout = setTimeout(function(){
+populateDiv()
+    },1000)
+    clearTimeout(timeout)
+}
+
 function populateDiv(){
     const a = document.getElementById('num1').value
     const b = document.getElementById('num2').value
@@ -43,14 +54,14 @@ response.text()
 
 }
 
-async function popularDiv2(){
-    const a = document.getElementById('num1').value
-    const b = document.getElementById('num2').value
+// async function popularDiv2(){
+//     const a = document.getElementById('num1').value
+//     const b = document.getElementById('num2').value
 
-    const response = await fetch('https://sum-server.100xdevs.com/sum?a='+ a + "&b=" + b )
-    const ans = await response.text()
-document.getElementById('finalsum').innerHTML = ans;
-}
+//     const response = await fetch('https://sum-server.100xdevs.com/sum?a='+ a + "&b=" + b )
+//     const ans = await response.text()
+// document.getElementById('finalsum').innerHTML = ans;
+// }
 </script>
 </body>
 </html>
