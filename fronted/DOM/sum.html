@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="eneter the number" id="num1"/><br>
+    <input type="number" placeholder="eneter the number " id="num2"/><br>
+
+    <button id="sum">Calculate the sum </button><br>
+<p id="result"></p>
+    <script>
+        let num1Input = document.getElementById('num1')
+let num2Input = document.getElementById('num2')
+
+
+let sumInput = document.getElementById('sum')
+let result = document.getElementById('result')
+
+sum.addEventListener('click',function(){
+    let num1 = parseFloat(num1Input.value)
+    let num2 = parseFloat(num2Input.value)
+
+    let sum = num1 + num2
+
+    result.textContent = "the sum is" + sum;
+})
+    </script>
+</body>
+</html>
